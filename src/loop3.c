@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-void _boot(void) {
+void main(void) {
     uint32_t x = 1;
-    for (; x < 3; x++) ;
+    for (; x < 0xcafe; x++);
 }

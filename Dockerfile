@@ -9,6 +9,6 @@ WORKDIR /home/dev
 RUN echo 'alias rvas=/home/dev/riscv/misc/as.sh' > .bashrc
 RUN echo 'alias rvcc=/home/dev/riscv/misc/cc.sh' >> .bashrc
 RUN echo 'alias rvdump=/home/dev/riscv/misc/dump.sh' >> .bashrc
-
+RUN echo 'alias rvlist=/home/dev/riscv/misc/list.sh' >> .bashrc
 
 CMD [ "bash" ]
