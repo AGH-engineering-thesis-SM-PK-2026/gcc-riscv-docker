@@ -1,3 +1,4 @@
 buildlog.txt
 **/*.o
 **/*.elf
+**/*.lst

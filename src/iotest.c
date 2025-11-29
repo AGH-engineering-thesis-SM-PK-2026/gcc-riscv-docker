@@ -1,10 +1,42 @@
 #include <stdint.h>
 
-#include "dev.h"
+#include "sysdev.h"
 
 void main(void) {
-    uint32_t x = 0b10101010;
-    gpio_a->out = x;
-    *(mem+0) = x;
-    *(mem+1) = x;
+    // for (;;) {
+        register uint32_t pc = 0;
+        uint32_t i;
+
+        pc++;
+        for (i = 0; i < 2<<14; i++);
+        gpioa->out = 0b10101010;
+        pc++;
+        for (i = 0; i < 2<<14; i++);
+        gpioa->out = 0b01010101;
+
+        pc++;
+        for (i = 0; i < 2<<14; i++);
+        gpioa->out = 0b10101010;
+        pc++;
+        for (i = 0; i < 2<<14; i++);
+        gpioa->out = 0b01010101;
+
+        pc++;
+        for (i = 0; i < 2<<14; i++);
+        gpioa->out = 0b10101010;
+        pc++;
+        for (i = 0; i < 2<<14; i++);
+        gpioa->out = 0b01010101;
+
+        pc++;
+        for (i = 0; i < 2<<14; i++);
+        gpioa->out = 0b10101010;
+        pc++;
+        for (i = 0; i < 2<<14; i++);
+        gpioa->out = 0b01010101;
+
+        pc++;
+        gpioa->out = pc;
+        for (;;);
+    // }
 }

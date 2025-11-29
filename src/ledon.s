@@ -1,11 +1,8 @@
-.extern main
-
-.set RAMEND, 0x00002000
-
 .section .text.boot, "ax", @progbits
 .global _start
 _start:
-    li sp, RAMEND
-    call main
+    li a4, 0x55
+    li a5, 0x10
+    sw a4, 0(a5)
 _end:
     j _end
